@@ -17,20 +17,19 @@ int main()
     vector<vector<int> > matrix(11, vector<int>(11));
     int r = rand() % 10 + 1;
     int day = 2, first = 1,last = 5;
-    for (int x = 1; x < 11; x++)
+    for (int x = 0; x < 10; x++)
     {
-        for (int y = 10; y > 0; y--)
+        for (int y = 0; y < 10; y++)
         {
             matrix[x][y] = 0;
         };
     }
-    
     matrix[r][r] = 1; // tree
     matrix[day][last] = 2; // hero
     matrix[10-day][first] = 3; // tree
-    for (int x = 1; x < 11; x++)
+    for (int x = 1; x <= 10; x++)
     {
-        for (int y = 10; y > 0; y--)
+        for (int y = 10; y >= 1; y--)
         {
             cout << matrix[x][y] << " ";
         }
